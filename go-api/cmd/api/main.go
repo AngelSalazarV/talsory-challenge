@@ -8,6 +8,8 @@ import (
 	"github.com/AngelSalazarV/talsory-challenge/go-api/internal/middleware"
 
 	"github.com/gofiber/fiber/v2/middleware/cors"
+
+	"os"
 )
 
 func main() {
@@ -28,5 +30,11 @@ func main() {
 
 	app.Post("/api/qr", middleware.JWTProtected, handlers.CalculateQR)
 
-	app.Listen(":3000")
+	port := os.Getenv("PORT")
+
+	if port == "" {
+			port = "3000"
+	}
+
+	app.Listen(":" + port)
 }
