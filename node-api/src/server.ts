@@ -13,6 +13,8 @@ app.get("/health", (_req, res) => {
 
 app.post("/api/stats", getStats);
 
-app.listen(3001, () => {
-  console.log("Node API running on port 3001");
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`Node API running on port ${PORT}`);
 });
