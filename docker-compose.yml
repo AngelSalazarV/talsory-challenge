@@ -1,0 +1,15 @@
+services:
+
+  node-api:
+    build: ./node-api
+    ports:
+      - "3001:3001"
+
+  go-api:
+    build: ./go-api
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_API_URL: http://node-api:3001
+    depends_on:
+      - node-api
