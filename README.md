@@ -89,6 +89,10 @@ npm test
 
 **Frontend:** https://talsory-challenge.vercel.app
 
+**Go API:** https://talsory-go-api.onrender.com
+
+**Node API:** https://talsory-node-api.onrender.com
+
 ## Nota
 
 El enunciado menciona inicialmente una rotación de matrices, pero posteriormente especifica la **factorización QR** como funcionalidad requerida. Se implementó QR como operación principal.
